@@ -1,4 +1,4 @@
-// ±×·¡ÇÁ¿¡¼­ Á¤Á¡³¢¸®ÀÇ ÃÖ´Ü °æ·Î¸¦ ±¸ÇÏ´Â ¹æ¹ý
+// ê·¸ëž˜í”„ì—ì„œ ì •ì ë¼ë¦¬ì˜ ìµœë‹¨ ê²½ë¡œë¥¼ êµ¬í•˜ëŠ” ë°©ë²•
 
 #include<iostream>
 #include<vector>
@@ -17,7 +17,7 @@ stack<int> path;
 int main()
 {
 	cin >> n >> m;
-	fw.resize(n + 1);	// Å×ÀÌºí ÃÊ±âÈ­
+	fw.resize(n + 1);	// í…Œì´ë¸” ì´ˆê¸°í™”
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -34,8 +34,8 @@ int main()
 		fw[u - 1][v - 1].second = u - 1;
 	}
 	//--------------------------------------------------------
-	printf("--------ÃÊ±â Å×ÀÌºí---------\n");
-	printf("--°Å¸®\n");
+	printf("--------ì´ˆê¸° í…Œì´ë¸”---------\n");
+	printf("--ê±°ë¦¬\n");
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -45,7 +45,7 @@ int main()
 		printf("\n");
 	}
 	//---------------------------------------------------------
-	printf("--Á÷Àü ÇÁ·Î½ÃÀú\n");
+	printf("--ì§ì „ í”„ë¡œì‹œì €\n");
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
@@ -65,8 +65,8 @@ int main()
 				}
 			}
 	//----------------------------------------------------------
-	printf("\n///////////¿Ï·á ÈÄ Å×ÀÌºí/////////\n");
-	printf("--°Å¸®\n");
+	printf("\n///////////ì™„ë£Œ í›„ í…Œì´ë¸”/////////\n");
+	printf("--ê±°ë¦¬\n");
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -88,7 +88,7 @@ int main()
 		for (int j = 0; j < n; j++)
 		{
 			if (fw[i][j].second == NIL) continue;
-			printf("%dºÎÅÍ %d±îÁöÀÇ °æ·Î : ", i + 1, j + 1);
+			printf("%dë¶€í„° %dê¹Œì§€ì˜ ê²½ë¡œ : ", i + 1, j + 1);
 			int pre = j;
 			path.push(j + 1);
 
